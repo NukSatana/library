@@ -40,7 +40,7 @@ em {font-style: italic;}
 @font-face {font-family: 'Geogrotesque-SemiBold';src: url('../fonts/webfonts/geo-semibold/eot/style_169898.eot');src: url('../fonts/webfonts/geo-semibold/eot/style_169898.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/geo-semibold/woff/style_169898.woff') format('woff'),url('../fonts/webfonts/geo-semibold/ttf/style_169898.ttf') format('truetype'),url('../fonts/webfonts/geo-semibold/svg/style_169898.svg#Geogrotesque-SemiBold') format('svg');}
 
 /* GEO - Medium */
-@font-face {font-family: 'Geogrotesque-Medium';src: url('../fonts/webfonts/geo-medium/eot/1110FC_0.eot');src: url('../fonts/webfonts/geo-medium/eot/1110FC_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/geo-medium/woff/1110FC_0.woff') format('woff'),url('../fonts/webfonts/geo-medium/ttf/1110FC_0.ttf') format('truetype'),url('webfonts/1110FC_0.svg#wf') format('svg');}
+@font-face {font-family: 'Geogrotesque-Medium';src: url('../fonts/webfonts/geo-medium/eot/1110FC_0.eot');src: url('../fonts/webfonts/geo-medium/eot/1110FC_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/geo-medium/woff/1110FC_0.woff') format('woff'),url('../fonts/webfonts/geo-medium/ttf/1110FC_0.ttf') format('truetype'),url('../fonts/webfonts/geo-medium/svg/1110FC_0.svg#wf') format('svg');}
 
 /* GEO - Regular */
  @font-face {font-family: 'Geogrotesque-Regular';src: url('../fonts/webfonts/geo-regular/eot/11014B_0.eot');src: url('../fonts/webfonts/geo-regular/eot/11014B_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/geo-regular/woff/11014B_0.woff') format('woff'),url('../fonts/webfonts/geo-regular/ttf/11014B_0.ttf') format('truetype'),url('../fonts/webfonts/geo-regular/svg/11014B_0.svg#wf') format('svg');}
@@ -48,16 +48,17 @@ em {font-style: italic;}
 /* Icon Fonts
 *********************************/
 /* Font-face Icons */
-@font-face {
-	font-family: 'flexslider-icon';
-	src:url('../fonts/webfonts/flexslider-icon.eot');
-	src:url('../fonts/webfonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/webfonts/flexslider-icon.woff') format('woff'),
-		url('../fonts/webfonts/flexslider-icon.ttf') format('truetype'),
-		url('../fonts/webfonts/flexslider-icon.svg#flexslider-icon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+/*@font-face {*/
+/*	font-family: 'flexslider-icon';*/
+/*	src:url('fonts/flexslider_icon.eot');*/
+/*	src:url('fonts/flexslider_icon.eot?#iefix') format('embedded-opentype'),*/
+/*		url('fonts/flexslider-icon.woff') format('woff'),*/
+/*		url('fonts/flexslider-icon.ttf') format('truetype'),*/
+/*		url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');*/
+/*	!*slider/fonts*!*/
+/*	font-weight: normal;*/
+/*	font-style: normal;*/
+/*}*/
 
 /* General
 ***********************/
@@ -93,7 +94,7 @@ p {
 
 .toggle { margin: 2px 0 0 14px; float: left; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; }
 .toggle li { float: left; }
-.toggle li a {width: 50px; padding: 6px 0; text-align: center; display: block; text-shadow: 1px 1px 0 #fff; font-size: 12px; font-weight: 600; color: #666; -webkit-border-radius: 0 4px 4px 0; -moz-border-radius: 0 4px 4px 0; -o-border-radius: 0 4px 4px 0; border-radius: 0 4px 4px 0; 
+.toggle li a {width: 50px; padding: 6px 0; text-align: center; display: block; text-shadow: 1px 1px 0 #fff; font-size: 12px; font-weight: 600; color: #666; -webkit-border-radius: 0 4px 4px 0; -moz-border-radius: 0 4px 4px 0; -o-border-radius: 0 4px 4px 0; border-radius: 0 4px 4px 0;
 
 background: #ffffff; /* Old browsers */
 background: -moz-linear-gradient(top, #ffffff 0%, #ededed 100%); /* FF3.6+ */
@@ -210,7 +211,7 @@ nav li.active a  { cursor: default; }
 		min-height: 46px;
 		margin-bottom: 20px;
 		width: 100%;
-	}	
+	}
 	nav ul {
 		width: 260px;
 		padding: 0;
@@ -275,14 +276,14 @@ nav li.active a  { cursor: default; }
 	nav ul:hover .active a:after  {
 		display: none;
 	}
-  
+
 }
 
 /*
  SyntaxHighlighter - http://alexgorbatchev.com/SyntaxHighlighter
- 
+
  SyntaxHighlighter is donationware. If you are using it, please donate. - http://alexgorbatchev.com/SyntaxHighlighter/donate.html
- 
+
  @version - 3.0.83 (July 02 2010)
  @copyright - Copyright (C) 2004-2010 Alex Gorbatchev.
  @license - Dual licensed under the MIT and GPL licenses.
@@ -373,7 +374,7 @@ nav li.active a  { cursor: default; }
 .syntaxhighlighter .value{color:#009900 !important;}
 .syntaxhighlighter .functions{color:#ff1493 !important;}
 .syntaxhighlighter .constants{color:#0066cc !important;}
-.syntaxhighlighter .script{font-weight:bold !important;color:#006699 !important;background-color:none !important;}
+.syntaxhighlighter .script{font-weight:bold !important;color:#006699 !important;background:none !important;}
 .syntaxhighlighter .color1,.syntaxhighlighter .color1 a{color:gray !important;}
 .syntaxhighlighter .color2,.syntaxhighlighter .color2 a{color:#ff1493 !important;}
 .syntaxhighlighter .color3,.syntaxhighlighter .color3 a{color:red !important;}
