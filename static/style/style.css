@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+  }
+p {
+    margin: 0px 0px;
+    color: #FFFFFF;
+}
+a {
+    text-decoration: none;
+}
+html, body {
+    height: 100%;
+}
+body, .category_wrap, .card, .spe_sub, .kinds_cat, .titl_p {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    background-color: #1E1E1E;
+}
+.messengers, .title_logo, .title_g, nav, .profile_f, .text_nav, .wrap_b, .categ, .img_p, .img_titl, .f_text, .wrap_al_cards, .c_w {
+    display: flex;
+    flex-direction: row;
+}
+.wrap_nav {
+    height: 60px;
+    background: #222C43;
+    align-items: center;
+}
+.block_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 1440px;
+    height: 60px;
+}
+.messengers {
+    margin-left: 20px;
+    align-items: center;
+    padding: 0px;
+    height: 30px;
+    gap: 2px;
+}
+.profile_f, .text_nav, .f_text {
+    justify-content: center;
+    align-items: center;
+}
+.title_logo {
+    align-items: center;
+
+}
+.title_g {
+    white-space: nowrap;
+    padding-right: 10px;
+}
+.title_g > h1, .text_nav > a > p, .f_text > p{
+    font-family: 'Inika';
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.title_g > h1, .titl2, .ti_h3, .titl_r, .t_x, .btn_d, .title, .ml-ti, .x  {
+    color: #06DDF6;
+}
+.title_g > h1 {
+    margin: 0;
+    width: 256px;
+    height: 52px;
+    font-size: 40px;
+    line-height: 52px;
+}
+.title_logo > a > img {
+    width: 60px;
+    height: 60px;
+}
+.profile_f {
+    margin-right: 20px;
+}
+.text_nav > a > p {
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+.mar {
+    padding-left: 20px;
+}
+.wrap_b, .category_wrap, .categ, .img_p, .img_titl, .spe_sub, .wrap_al_cards, .c_w {
+    align-items: flex-start;
+}
+.category_wrap {
+    flex: none;
+    flex-grow: 0;
+}
+.wrap_b {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    margin: auto;
+    padding-top: 0px;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+.gh {
+    margin-right: 20px;
+    order: 2;
+}
+.gg {
+    order: -1;
+    margin-left: 20px;
+
+}
+.category_wrap {
+    padding: 0px;
+    height: 105px;
+}
+.categ {
+    gap: 10px;
+    width: 185px;
+}
+.titl2 {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    width: 170px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.kinds_cat {
+    align-items: center;
+    padding: 0px;
+}
+.cat_item {
+    width: 200px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.line_a {
+    margin-bottom: 2px;
+    margin-top: 2px;
+    width: 190px;
+    height: 0px;
+    border: 1px solid #06DDF6;
+}
+.titl_p {
+    padding: 0px;
+}
+.img_p {
+    width: 324px;
+    height: 480px;
+    margin: 0px;
+    gap: 10px;
+}
+.logo_img {
+    width: 324px;
+    height: 480px;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+    padding-right: 20px;
+}
+.img_titl {
+    padding: 10px;
+    gap: 10px;
+}
+.warp_r_t {
+    margin-bottom: 15px;
+    margin-left: 40px;
+    width: 619px;
+    height: 56px;
+}
+.cat_item, .titl_r, .titl2 .t_h3, .btn_d, .t, .t_x, .title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+}
+.titl_r {
+    align-items: center;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+}
+.spe_sub {
+    padding: 0px;
+    gap: 3px;
+}
+.t_h3 {
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.btn_d {
+    width: 180px;
+    height: 40px;
+    background: #6B6D70;
+    border: 1px solid #06DDF6;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 28px;
+}
+.descr {
+    margin: 5px 10px;
+}
+.t {
+    font-size: 22px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.footer {
+    height: 60px;
+    background: #222C43;
+    width: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.f_text {
+    padding: 10px;
+    gap: 10px;
+}
+.f_text > p{
+    width: 80px;
+    height: 40px;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+}
+.wrap_al_cards {
+    max-width: 1040px;
+    min-height: 750px;
+    padding: 0px;
+    /* gap: 30px; */
+}
+.c_w {
+    flex-wrap: wrap;
+    padding: 0px;
+    /* gap: 34px; */
+    max-width: 1036px;
+    min-height: 360px;
+}
+.card, .ard__img, .card_img, .tex {
+    width: 160px;
+}
+.card {
+    align-items: center;
+    padding: 0px;
+    /* gap: 5px; */
+    margin: 5px;
+    height: 340px;
+    background: #6B6D70;
+    border: 1px solid #06DDF6;
+    border-radius: 5px;
+}
+.ard__img {
+    height: 260px;
+    border-radius: 5px 5px 0px 0px;
+}
+.card_img {
+    height: 260px;
+}
+.tex {
+    height: 75px;
+}
+.t_x {
+    /* width: 160px; */
+    overflow: hidden;
+    height: 75px;
+    padding: 5px 5px;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+.title {
+    text-align: center;
+    width: 300%;
+    margin: 10px 0;
+    font-size: 26px;
+}
+.img_stud {
+    height: 400px;
+    width: 400px;
+}
+.at-vb {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+.wp-skm {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.at-vb {
+    font-size: 14px;
+}
+.ml-ti {
+    font-size: 18px;
+}
+.lg {
+    width: 95%;
+    margin-right: 5px;
+}
+.entry-content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.top {
+    margin-bottom: 15px;
+}
+.mySlides > img {
+    border-radius: 5px;
+}

@@ -1,0 +1,43 @@
+{% extends 'book/base.html' %}
+{% load static %}
+
+{% block sup_con %}
+    <div class="wrap_al_cards">
+            <div class="c_w">
+                    <p class="title">Циклова комісія інформаційних технологій </p>
+                <div class="wp-skm">
+                    <div class="wp-img">
+                        {% for foo in home_img %}
+                        <img class="lg" src="{{ foo.photo_home.url }}" alt="">
+                        {% endfor %}
+                    </div>
+                    <div class="wp-text">
+                        <p class="ml-ti at-vb"><strong>Склад циклової комісії</strong></p>
+                        {% for foo in teacher %}
+                        <p class="at-vb"><strong>{{ foo.teachers}}</strong> – {{ foo.position_o }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="entry-content">
+                    <div class="slideshow-container">
+                    {% if photo_students %}
+                        {% for photo_student in photo_students %}
+                            <div class="mySlides fade">
+                                <img src="{{photo_student.photo_students.url }}" style="width:100%">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                    {% for photo_student in photo_students %}
+                        <span class="dot"></span>
+                    {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+{% endblock %}
+{% block js %}
+    <script src="{% static 'js/slider.js' %}"></script>
+{% endblock %}

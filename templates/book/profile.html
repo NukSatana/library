@@ -1,0 +1,36 @@
+{% extends 'book/base.html' %}
+{% load static %}
+
+{% block breadcrumbs %}
+    {{ block.super }}
+    <a href="{% url 'index' %}" style="color: #06DDF6; font-size: 16px; font-family: 'Roboto'; font-style: normal; font-weight: 400;">Головна</a>
+    {% for card in cards.category.values %}
+    &rsaquo; <a href="{% url 'category' pk=card.id %}" style="color: #06DDF6; font-size: 16px; font-family: 'Roboto'; font-style: normal; font-weight: 400;">{{ card.name_category }}</a>
+    {% endfor %}
+    &rsaquo; <a href="{% url 'book-detail' pk=cards.id %}" style="color: #06DDF6; font-size: 16px; font-family: 'Roboto'; font-style: normal; font-weight: 400;">{{ cards.title }}</a>
+{% endblock %}
+
+{% block sup_con %}
+    <div class="descrp">
+        <div class="img_titl">
+            <div class="img_p">
+                <img src="{{ object.img.url }}" class="logo_img" alt="photo_book">
+            </div>
+            <div class="titl_p">
+                <div class="wrap_t_r">
+                    <h2 class="titl_r">{{ object.title }}</h2>
+                </div>
+                <div class="spe_sub">
+                    <h3 class="t_h3"><span class="ti_h3">Спеціальність:</span> {{ object.category.all|join:', ' }}</h3>
+                    <h3 class="t_h3"><span class="ti_h3">Освітні компоненти:</span> {{ object.edu_comp.all|join:', ' }}</h3>
+                    <a href="{{ object.file_downl.url }}" target="_blank">
+                        <button class="btn_d">Open</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="descr">
+            <p class="t">{{ object.description }}</p>
+        </div>
+    </div>
+{% endblock %}

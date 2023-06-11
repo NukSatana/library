@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'style/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'style/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="{% static '/Slider/flexslider-rtl-min.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    {% endblock %}
+    <title>Library HDPK</title>
+</head>
+<body>
+    {% block nav %}
+        <nav class="wrap_nav">
+            <div class="block_nav">
+                <div class="messengers">
+                    <div class="facebook">
+                        <a target="_blank" href="https://www.facebook.com/groups/2205576599582088" title="facebook">
+                            <img alt="Facebook" src="/static/icon/Facebook.png">
+                        </a>
+                    </div>
+                    <div class="youtube">
+                        <a target="_blank" href="https://www.youtube.com/channel/UC5RRje9zxKyq2cPXmvPsBMw" title="YouTube">
+                            <img alt="YouTube" src="/static/icon/YouTube.png">
+                        </a>
+                    </div>
+                    <div class="instagram`">
+                        <a target="_blank" href="https://www.instagram.com/hdpk_hemttb/" title="Instagram">
+                            <img alt="Instagram" src="/static/icon/Instagram.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="title_logo">
+                    <div class="title_g">
+                        <h1>Library HDPK</h1>
+                    </div>
+                    <a target="_blank" href="http://hpfk.kh.ua">
+                        <img src="/static/icon/LOGO.png" alt="LOGO">
+                    </a>
+                </div>
+                <div class="profile_f">
+                    <div class="text_nav">
+                        <a href="{% url 'index' %}"><p>Home</p></a>
+                        <a href="{% url 'admin:login' %}" class='mar'><p>Sign Up</p></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    {% endblock %}
+
+        <div class="breadcrumb" style="display: flex; flex-direction: row;align-items: center;width: 1440px;margin: 5px auto;">
+            <div class="wrap" style="width: 1440px; margin: 0 25px; color: #06DDF6;">
+                {% block breadcrumbs %}
+
+                {% endblock %}
+            </div>
+        </div>
+
+    {% block content %}
+        <div class="wrap_b">
+            {% block spe %}
+                <div class="category_wrap gg">
+                    <div class="top">
+                        <div class="categ">
+                            <h2 class="titl2">Спеціальність:</h2>
+                        </div>
+                        <div class="kinds_cat">
+                            <div class="cat_item">
+                                <div class="line_a"></div>
+                                    <a href="{{ category_123.get_absolute_url }}">
+                                        <p>{{ category_123.name_category }}</p>
+                                    </a>
+                                <div class="line_a"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot">
+                        <div class="categ">
+                            <h2 class="titl2">Освітні компоненти:</h2>
+                        </div>
+                        <div class="kinds_cat">
+                            <div class="cat_item">
+                                {% for component in category_123.item.all %}
+                                    <a href="{{ component.get_absolute_url }}"><p>{{ component.name_edu_comp }}</p></a>
+                                    <div class="line_a"></div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+            {% block sup_con %}
+
+            {% endblock %}
+            {% block edu %}
+                <div class="category_wrap gh">
+                   <div class="top">
+                        <div class="categ">
+                            <h2 class="titl2">Спеціальність:</h2>
+                        </div>
+                        <div class="kinds_cat">
+                            <div class="cat_item">
+                                <div class="line_a"></div>
+                                    <a href="{{ category_151.get_absolute_url }}">
+                                        <p>{{ category_151.name_category }}</p>
+                                    </a>
+                                <div class="line_a"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot">
+                        <div class="categ">
+                            <h2 class="titl2">Освітні компоненти:</h2>
+                        </div>
+                        <div class="kinds_cat">
+                            <div class="cat_item">
+                                {% for component in category_151.item.all %}
+                                    <a href="{{ component.get_absolute_url }}"><p>{{ component.name_edu_comp }}</p></a>
+                                    <div class="line_a"></div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block footer %}
+        <footer class="footer">
+            <div class="f_text">
+                <p>©HDPK</p>
+            </div>
+        </footer>
+    {% endblock %}
+    {% block js %}
+
+    {% endblock %}
+</body>
+</html>

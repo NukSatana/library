@@ -1,0 +1,57 @@
+{% extends 'book/base.html' %}
+{% load static %}
+
+
+{% block breadcrumbs %}
+    {{ block.super }}
+    <a href="{% url 'index' %}" style="color: #06DDF6; font-size: 16px; font-family: 'Roboto'; font-style: normal; font-weight: 400;">Головна</a>
+    {% if request.path == '/category/2/' %}
+        &rsaquo; <a href="{% url 'category' pk=category.id %}" style="color: #06DDF6; font-size: 16px; font-family: 'Roboto'; font-style: normal; font-weight: 400;">{{ category_123 }}</a>
+    {% endif %}
+    {% if request.path == '/category/1/' %}
+        &rsaquo; <a href="{% url 'category' pk=category.id %}" style="color: #06DDF6; font-size: 16px; font-family: 'Roboto'; font-style: normal; font-weight: 400;">{{ category_151 }}</a>
+    {% endif %}
+
+{% endblock %}
+
+{% block sup_con %}
+    <div class="wrap_al_cards">
+        <div class="c_w">
+        {% if request.path == '/category/2/' %}
+            {% if category_123.books_cat.all %}
+                {% for book in category_123.books_cat.all %}
+                    <div class="card">
+                        <a href="{{ book.get_absolute_url }}">
+                            <div class="card__img">
+                                <img src="{{ book.img.url }}" class="ard__img" alt="photo">
+                            </div>
+                            <div class="tex">
+                                <p class="t_x">{{ book.title }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+                {% else %}
+                    <p class="x t" >Файлы отсутствуют..</p>
+            {% endif %}
+            {% elif request.path == '/category/1/' %}
+                {% if category_123.books_cat.all %}
+                    {% for book in category_151.books_cat.all %}
+                        <div class="card">
+                            <a href="{{ book.get_absolute_url }}">
+                                <div class="card__img">
+                                    <img src="{{ book.img.url }}" class="ard__img" alt="photo">
+                                </div>
+                                <div class="tex">
+                                    <p class="t_x">{{ book.title }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    {% else %}
+                    <p class="x t" >Файлы отсутствуют..</p>
+            {% endif %}
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}
